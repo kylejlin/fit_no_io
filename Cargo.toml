@@ -10,7 +10,6 @@ repository = "https://github.com/richardbrodie/fit-rs"
 fit_sdk_version = "20.85.00"
 
 [dependencies]
-memmap = "^0.7.0"
 copyless = "^0.1.4"
 
 [dev-dependencies]
@@ -20,19 +19,6 @@ criterion = "^0.2.11"
 csv = "^1.0"
 heck = "^0.3"
 
-[[bin]]
-name = "test_std"
-path = "bin/test_std.rs"
-[[bin]]
-name = "test_all"
-path = "bin/test_all.rs"
-[[bin]]
-name = "test_dev_fields"
-path = "bin/test_dev_fields.rs"
-
-[[bench]]
-name = "read_file"
-harness = false
 
 [profile.release]
 opt-level = 3
