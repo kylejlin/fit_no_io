@@ -8,6 +8,7 @@ description = "A small crate used for reading and decoding FIT files generated b
 documentation = "https://docs.rs/fit_no_io"
 repository = "https://github.com/kylejlin/fit_no_io"
 fit_sdk_version = "20.85.00"
+exclude = ["FitSDKRelease_20.94.00.zip"]
 
 [dependencies]
 copyless = "^0.1.4"
