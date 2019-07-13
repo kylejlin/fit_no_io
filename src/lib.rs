@@ -32,11 +32,9 @@ const FIELD_DEFINITION_BASE_NUMBER: u8 = 0b00_011_111;
 const COORD_SEMICIRCLES_CALC: f32 = (180f64 / (std::u32::MAX as u64 / 2 + 1) as f64) as f32;
 const PSEUDO_EPOCH: u32 = 631_065_600;
 
-pub fn run(mut buf: &[u8]) -> Vec<Message> {
+pub fn run<T: AsRef<[u8]>>(buf: T) -> Vec<Message> {
+    let mut buf = buf.as_ref();
     let mut global_string_map: HashMap<u8, String> = HashMap::with_capacity(64);
-    // let file = File::open(path).unwrap();
-    // let mmap = unsafe { MmapOptions::new().map(&file).unwrap() };
-    // let mut buf: &[u8] = &mmap;
 
     let _fh = FileHeader::new(&mut buf);
     let mut q: VecDeque<(u8, DefinitionRecord)> = VecDeque::new();
