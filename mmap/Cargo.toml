@@ -1,0 +1,11 @@
+[package]
+name = "mmap"
+version = "0.1.0"
+authors = ["Kyle Lin <kylejlin.us@gmail.com>"]
+edition = "2018"
+description = "A wrapper around memmap."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+memmap = "^0.7.0"

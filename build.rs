@@ -174,7 +174,11 @@ fn write_match_message_field(set: &HashSet<&String>, msgs_store: &HashMap<String
         "        MessageType::None => panic!(\"cannot call this with a None variant\"),",
     )
     .unwrap();
-    writeln!(&mut outfile, "        _ => &[]\n    }}\n}}",).unwrap();
+    writeln!(
+        &mut outfile,
+        "        _ => &[]\n    }}\n}}",
+    )
+    .unwrap();
 }
 
 fn write_match_message_offset(
@@ -228,7 +232,11 @@ fn write_match_message_offset(
         "        MessageType::None => panic!(\"cannot call this with a None variant\"),",
     )
     .unwrap();
-    writeln!(&mut outfile, "        _ => &[]\n    }}\n}}",).unwrap();
+    writeln!(
+        &mut outfile,
+        "        _ => &[]\n    }}\n}}",
+    )
+    .unwrap();
 }
 
 fn write_match_message_scale(set: &HashSet<&String>, msgs_store: &HashMap<String, Vec<KeyValSet>>) {
@@ -280,7 +288,11 @@ fn write_match_message_scale(set: &HashSet<&String>, msgs_store: &HashMap<String
         "        MessageType::None => panic!(\"cannot call this with a None variant\"),",
     )
     .unwrap();
-    writeln!(&mut outfile, "        _ => &[]\n    }}\n}}",).unwrap();
+    writeln!(
+        &mut outfile,
+        "        _ => &[]\n    }}\n}}",
+    )
+    .unwrap();
 }
 
 fn write_match_message_type(map: &Vec<KeyValPair>) {
